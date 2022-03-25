@@ -57,12 +57,21 @@ where ```ASC``` is ascending order and ```DESC``` is descending order.
     FETCH  NEXT [  row_count | percent PERCENT  ] ROWS  [ ONLY | WITH TIES ]
      ```
 
-    The ```OFFSET``` clause specifies the number of rows to skip before the row limiting starts
+    * The ```OFFSET``` clause specifies the number of rows to skip before the row limiting starts
+    * The ```WITH TIES``` returns additional rows with the same sort key as the last row fetched.When using ```WITH TIES```, an ```ORDER BY``` clause must be used in the query. 
 
 
 6. IN – determine if a value matches any value in a list or a subquery.
-7. BETWEEN – filter data based on a range of values.
-8. LIKE  – perform matching based on specific patterns.
+    ```expression [NOT] IN (v1,v2,...)```
+    or
+
+    ```expression [NOT] IN (subquery)```
+7. BETWEEN – filter data based on a range of values:
+
+    ```expression [ NOT ] BETWEEN low AND high```
+8. LIKE  – perform matching based on specific patterns:
+
+    ```expresion [NOT] LIKE pattern [ ESCAPE escape_characters ]``` 
 9. IS NULL and IS NOT NULL – check if an expression or values in a column is NULL or not.
 
- 
+    ```expression |  column  IS NULL```
