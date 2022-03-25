@@ -44,8 +44,12 @@ where ```ASC``` is ascending order and ```DESC``` is descending order.
     ```expression_1 OR expression_2```
 5. FETCH –limit rows returned by a query.
 
-    ```[ OFFSET offset ROWS] FETCH  NEXT [  row_count | percent PERCENT  ] ROWS  [ ONLY | WITH TIES ]```
+    ```
+    [ OFFSET offset ROWS]
     
+    FETCH  NEXT [  row_count | percent PERCENT  ] ROWS  [ ONLY | WITH TIES ]
+     ```
+
     The ```OFFSET``` clause specifies the number of rows to skip before the row limiting starts
 
 
