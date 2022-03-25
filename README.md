@@ -2,9 +2,9 @@
 A list of common SQL commands and queries while using Oracle database
 
 # Basics
-1. [Querying data](#)
-2. [Sorting data]()
-3. [Insert data]()
+1. [Querying data](#querying-data )
+2. [Sorting data](#sorting-data)
+3. [Filtering data](#filtering-data)
 4. [Indexing Columns]()
 5. [Querying data]()
 6. [Adding Columns]()
@@ -19,12 +19,19 @@ A list of common SQL commands and queries while using Oracle database
 ## Querying Data
 To retrieve data from one or more columns of a table:
 
-``` SELECT column_1, column_2,  ... FROM table_name; ```
+```
+ SELECT column_1, column_2,
+ FROM table_name;
+```
 
 ## Sorting Data
 To sort data use:
 
-``` SELECT column_1,column_2 FROM table_name ORDER BY column_1 [ASC | DESC] [NULLS FIRST | NULLS LAST],  column_2 [ASC | DESC] [NULLS FIRST | NULLS LAST] ```
+``` 
+SELECT column_1,column_2 
+FROM table_name 
+ORDER BY column_1 [ASC | DESC] [NULLS FIRST | NULLS LAST],  column_2 [ASC | DESC] [NULLS FIRST | NULLS LAST]
+ ```
 
 where ```ASC``` is ascending order and ```DESC``` is descending order.
 
@@ -46,7 +53,7 @@ where ```ASC``` is ascending order and ```DESC``` is descending order.
 
     ```
     [ OFFSET offset ROWS]
-    
+
     FETCH  NEXT [  row_count | percent PERCENT  ] ROWS  [ ONLY | WITH TIES ]
      ```
 
