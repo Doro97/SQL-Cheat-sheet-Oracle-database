@@ -30,7 +30,7 @@ To sort data use:
 ``` 
 SELECT column_1,column_2 
 FROM table_name 
-ORDER BY column_1 [ASC | DESC] [NULLS FIRST | NULLS LAST],  column_2 [ASC | DESC] [NULLS FIRST | NULLS LAST]
+ORDER BY column_1 [ASC | DESC] [NULLS FIRST | NULLS LAST],column_2 DESC
  ```
 
 where ```ASC``` is ascending order and ```DESC``` is descending order.
