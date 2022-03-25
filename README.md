@@ -5,7 +5,7 @@ A list of common SQL commands and queries while using Oracle database
 1. [Querying data](#querying-data )
 2. [Sorting data](#sorting-data)
 3. [Filtering data](#filtering-data)
-4. [Indexing Columns]()
+4. [Joining tables](#joining-tables)
 5. [Querying data]()
 6. [Adding Columns]()
 7. [Querying the Oracle Data dictionary]()
@@ -75,3 +75,66 @@ where ```ASC``` is ascending order and ```DESC``` is descending order.
 9. IS NULL and IS NOT NULL – check if an expression or values in a column is NULL or not.
 
     ```expression |  column  IS NULL```
+
+## Joining tables
+1. INNER JOIN-to query rows from a table that have matching rows from another table
+To query data from two or more related tables, you use the ```INNER JOIN``` clause
+
+```
+SELECT *
+FROM table1 INNER JOIN table2 
+ON join_predicate;
+```
+
+Use the ```USING``` clause to specify which columns to test for equality when joining tables.
+
+```
+SELECT *
+FROM table1 INNER JOIN table2 
+USING( column1, column2, ... );
+```
+
+2. LEFT JOIN- to select rows from the left table that have or don’t have the matching rows in the right table.
+
+```
+SELECT column_list
+FROM t1 LEFT JOIN t2 ON
+    t1.c1 = t2.c1
+    AND t1.c2 = t2.c2
+    AND t1.c3 = t2.c3
+    AND ... ;
+```
+
+3. RIGHT JOIN-to query rows from the right table that have or don’t have the matching rows in the left table.
+```
+SELECT column_list
+FROM T1
+RIGHT OUTER JOIN T2 
+ON join_predicate;
+```
+
+4. FULL OUTER JOIN
+
+```
+SELECT select_list
+FROM T1 FULL OUTER JOIN T2 
+ON join_condition;
+```
+
+5. CROSS JOIN-to make a Cartesian product from multiple tables
+```
+SELECT column_list
+FROM T1 
+CROSS JOIN T2; 
+```
+
+6. SELF-JOIN-a join that joins a table with itself
+```
+SELECT
+    column_list
+FROM
+    T t1
+INNER JOIN T t2 ON
+    join_predicate;
+
+```
