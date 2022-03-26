@@ -108,8 +108,8 @@ FROM t1 LEFT JOIN t2 ON
 3. RIGHT JOIN-to query rows from the right table that have or don’t have the matching rows in the left table.
 ```
 SELECT column_list
-FROM T1
-RIGHT OUTER JOIN T2 
+FROM table1
+RIGHT OUTER JOIN table2 
 ON join_predicate;
 ```
 
@@ -117,24 +117,23 @@ ON join_predicate;
 
 ```
 SELECT select_list
-FROM T1 FULL OUTER JOIN T2 
+FROM table1 FULL OUTER JOIN table2 
 ON join_condition;
 ```
 
 5. CROSS JOIN-to make a Cartesian product from multiple tables
 ```
 SELECT column_list
-FROM T1 
-CROSS JOIN T2; 
+FROM table1 
+CROSS JOIN table2; 
 ```
 
 6. SELF-JOIN-a join that joins a table with itself
 ```
-SELECT
-    column_list
-FROM
-    T t1
-INNER JOIN T t2 ON
-    join_predicate;
+SELECT column_list
+FROM T table1
+INNER JOIN T table2 
+ON join_predicate;
 
 ```
+
